@@ -1,0 +1,242 @@
+// theme.scss
+
+// colors
+$main-color: rgb(55, 99, 176);
+$light-color: rgb(230, 230, 230);
+$dark-color: rgb(57, 60, 66);
+$danger-color: rgb(237, 111, 69);
+$success-color: rgb(135, 204, 30);
+$white-color: #fff;
+
+//photoshop color
+$ps-light-color: #26c9ff;
+$ps-dark-color: #061e26;
+
+//illustrator color
+$ai-light-color: #ff811c;
+$ai-dark-color: #211107;
+
+//after effecs color
+$ae-light-color: #cd91fb;
+$ae-dark-color: #1e003e;
+
+//excel color
+$ex-light-color: #16a851;
+$ex-dark-color: #0e8140;
+
+//html color
+$ht-light-color: #e95e2c;
+$ht-dark-color: #db492b;
+
+//css color
+$cs-light-color: #549ecb;
+$cs-dark-color: #34629d;
+
+//javascript color
+$js-light-color: #ffd33a;
+$js-dark-color: #dbb632;
+
+//php color
+$ph-light-color: #6d74ab;
+$ph-dark-color: #413c74;
+
+//nodejs color
+$nd-light-color: #70a861;
+$nd-dark-color: #333;
+
+//marketing digital color
+$mk-light-color: linear-gradient(#db8734, #f67f57);
+$mk-dark-color: #393d45;
+
+//animation color
+$an-light-color: #d93e3f;
+$an-dark-color: #260503;
+
+//incopy color
+$ic-light-color: #ff68f7;
+$ic-dark-color: #230120;
+
+//indesign color
+$id-light-color: #ff3f93;
+$id-dark-color: #26000f;
+
+//lightroom color
+$lr-light-color: #b1d0e0;
+$lr-dark-color: #0d2531;
+
+//prelude color
+$pl-light-color: #01d9fc;
+$pl-dark-color: #002220;
+
+//premier color
+$pm-light-color: #ef82ff;
+$pm-dark-color: #27002f;
+
+// break points
+$mobile: 425px;
+$tablet: 768px;
+$desktop: 1024px;
+$landscape: 1440px;
+$tv: 2560px;
+
+// border
+$radius: 10px;
+
+// courses theme
+.ps-theme--border {
+	background-color: $ps-dark-color;
+	color: $white-color;
+	border: 3px solid $ps-light-color;
+}
+
+.ai-theme--border {
+	background-color: $ai-dark-color;
+	color: $white-color;
+	border: 3px solid $ai-light-color;
+}
+.ae-theme--border {
+	background-color: $ae-dark-color;
+	color: $white-color;
+	border: 3px solid $ae-light-color;
+}
+.ex-theme--border {
+	background-color: $ex-dark-color;
+	color: $white-color;
+	border: 3px solid $ex-light-color;
+}
+
+.ht-theme--border {
+	background-color: $ht-dark-color;
+	color: $white-color;
+	border: 3px solid $ht-light-color;
+}
+
+.cs-theme--border {
+	background-color: $cs-dark-color;
+	color: $white-color;
+	border: 3px solid $cs-light-color;
+}
+
+.js-theme--border {
+	background-color: $js-dark-color;
+	color: $white-color;
+	border: 3px solid $js-light-color;
+}
+
+.ph-theme--border {
+	background-color: $ph-dark-color;
+	color: $white-color;
+	border: 3px solid $ph-light-color;
+}
+
+.nd-theme--border {
+	background-color: $nd-dark-color;
+	color: $white-color;
+	border: 3px solid $nd-light-color;
+}
+
+.mk-theme--border {
+	background: $mk-dark-color;
+	color: $white-color;
+	border: 3px solid #db8734;
+}
+
+.an-theme--border {
+	background: $an-dark-color;
+	color: $white-color;
+	border: 3px solid $an-light-color;
+}
+
+.ic-theme--border {
+	background: $ic-dark-color;
+	color: $white-color;
+	border: 3px solid $ic-light-color;
+}
+
+.id-theme--border {
+	background: $id-dark-color;
+	color: $white-color;
+	border: 3px solid $id-light-color;
+}
+
+.lr-theme--border {
+	background: $lr-dark-color;
+	color: $white-color;
+	border: 3px solid $lr-light-color;
+}
+
+.pl-theme--border {
+	background: $pl-dark-color;
+	color: $white-color;
+	border: 3px solid $pl-light-color;
+}
+
+.pm-theme--border {
+	background: $pm-dark-color;
+	color: $white-color;
+	border: 3px solid $pm-light-color;
+}
+
+
+// courses theme text
+.ps-theme--text {
+	color: $ps-light-color;
+}
+
+.ai-theme--text {
+	color: $ai-light-color;
+}
+.ae-theme--text {
+	color: $ae-light-color;
+}
+.ex-theme--text {
+	color: $ex-light-color;
+}
+
+.ht-theme--text {
+	color: $ht-light-color;
+}
+
+.cs-theme--text {
+	color: $cs-light-color;
+}
+
+.js-theme--text {
+	color: $js-light-color;
+}
+
+.ph-theme--text {
+	color: $ph-light-color;
+}
+
+.nd-theme--text {
+	color: $nd-light-color;
+}
+
+.mk-theme--text {
+	color: #db8734;
+}
+
+.an-theme--text {
+	color: $an-light-color;
+}
+
+.ic-theme--text {
+	color: $ic-light-color;
+}
+
+.id-theme--text {
+	color: $id-light-color;
+}
+
+.lr-theme--text {
+	color: $lr-light-color;
+}
+
+.pl-theme--text {
+	color: $pl-light-color;
+}
+
+.pm-theme--text {
+	color: $pm-light-color;
+}

@@ -1,0 +1,75 @@
+@import "./theme";
+@import "./animations";
+@import "./typography";
+@import "./mixins";
+
+// setup the font
+@font-face {
+	font-family: "Ubuntu";
+	src: url("/fonts/Ubuntu-Regular.ttf");
+}
+
+// Box sizing rules
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	position: relative;
+	min-height: 100vh;
+	font-size: 62.5%;
+	font-family: "Ubuntu", "Helvetica", sans-serif;
+	scroll-behavior: smooth;
+}
+
+// set core body defaults
+body {
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+// Remove the list style of the ul and ol elements with a class attribute
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+// the A element that not have a class get the default style
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+// Make image easier to work
+img {
+	max-width: 100%;
+	display: block;
+}
+
+// Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+// custom scroll
+
+::-webkit-scrollbar {
+	background-color: $light-color;
+	width: 0.7rem;
+	// border-radius: $radius;
+}
+::-webkit-scrollbar-thumb {
+	// border-radius: $radius;
+	box-shadow: 0 0 5px #0000004a;
+	background-color: #3763b061;
+	&:hover {
+		background-color: #345ca0;
+	}
+}

@@ -1,0 +1,87 @@
+// 1.414, 1.250, 1.500, 1.200, 1.125, 1.067
+:root {
+	--base-size: 1rem;
+	--type-scale: 0.951rem;
+	--xsm: calc(var(--base-size) + var(--type-scale));
+	--sm: calc(var(--xsm) + var(--type-scale));
+	--md: calc(var(--sm) + var(--type-scale));
+	--lg: calc(var(--md) + var(--type-scale));
+	--xlg: calc(var(--lg) + var(--type-scale));
+	--xxlg: calc(var(--xlg) + var(--type-scale));
+}
+
+small,
+.text_small {
+	font-size: var(--base-size);
+}
+
+h6 {
+	font-size: var(--xsm);
+}
+
+h5 {
+	font-size: var(--sm);
+}
+
+h4 {
+	font-size: var(--md);
+}
+
+h3 {
+	font-size: var(--lg);
+}
+
+h2 {
+	font-size: var(--xlg);
+}
+h1 {
+	font-size: var(--xxlg);
+}
+
+@media (max-width: $tablet) {
+	:root {
+		--type-scale: 0.893rem;
+	}
+}
+
+@media (max-width: $mobile) {
+	:root {
+		--type-scale: 0.835rem;
+	}
+}
+
+// $base-size: 1em;
+// $type-scale: 1.333em;
+// $xsm: calc(#{$base-size} + #{$type-scale});
+// $sm: calc(#{$xsm} + #{$type-scale});
+// $md: calc(#{$sm} + #{$type-scale});
+// $lg: calc(#{$md} + #{$type-scale});
+// $xlg: calc(#{$lg} + #{$type-scale});
+// $xxlg: calc(#{$xlg} + #{$type-scale});
+
+// // p{
+// //     font-size: $xsm;
+// // }
+
+// h5 {
+// 	font-size: $sm;
+// }
+
+// h4 {
+// 	font-size: $md;
+// }
+
+// h3 {
+// 	font-size: $lg;
+// }
+
+// h2 {
+// 	font-size: $xlg;
+// }
+// h1 {
+// 	font-size: $xxlg;
+// }
+
+// @media (max-width: $tablet) {
+// 	$base-size: 0.5em;
+// }
