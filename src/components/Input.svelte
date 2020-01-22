@@ -8,7 +8,8 @@
   @import "../style/theme.scss";
 
   input,
-  textarea {
+  textarea,
+  select {
     min-width: 10rem;
     height: 4rem;
     width: 100%;
@@ -39,6 +40,12 @@
 
 {#if type === 'textarea'}
   <textarea cols="30" rows="10" {placeholder}>{value}</textarea>
+{:else if type === 'select'}
+  <select bind:value>
+    <slot>
+      <option>empty</option>
+    </slot>
+  </select>
 {:else}
   <input {type} {placeholder} {value} on:input />
 {/if}

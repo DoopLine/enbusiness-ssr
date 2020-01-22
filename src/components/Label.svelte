@@ -9,7 +9,8 @@
   p {
     padding: 0.5rem 1rem;
     margin: 1rem 0;
-    background-color: $ps-light-color;
+    background-color: $main-color;
+    color: $white-color;
     font-size: 1.7rem;
     font-weight: bold;
     height: fit-content;

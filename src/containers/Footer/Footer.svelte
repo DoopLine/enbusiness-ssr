@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
     background: url("/bg_polygon.png") no-repeat $main-color;
+    background-blend-mode: color-burn;
     background-position: center;
     background-size: cover;
     min-height: 15rem;

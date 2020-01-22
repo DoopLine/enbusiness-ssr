@@ -1,6 +1,7 @@
 <script>
   import { fade, slide } from "svelte/transition";
   import MdSearch from "svelte-icons/md/MdSearch.svelte";
+  import MdClose from "svelte-icons/md/MdClose.svelte";
   import Input from "../components/Input.svelte";
 
   export let value;
@@ -66,7 +67,11 @@
 </style>
 
 <button title="pesquisar" on:click={() => (showInput = !showInput)}>
-  <MdSearch />
+  {#if value}
+    <MdClose />
+  {:else}
+    <MdSearch />
+  {/if}
 </button>
 
 {#if showInput}

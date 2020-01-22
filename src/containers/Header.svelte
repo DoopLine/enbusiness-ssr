@@ -22,6 +22,7 @@
     background-color: $main-color;
     background-repeat: no-repeat;
     background-image: url("/bg_polygon.png");
+    background-blend-mode: color-burn;
     background-size: cover;
     background-position-y: center;
     height: fit-content;

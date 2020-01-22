@@ -23,7 +23,7 @@
 </style>
 
 <section>
-  <video autoplay muted autobuffer playsinline loop>
+  <video autoplay controls loop>
     <source src="./cursos.mp4" />
   </video>
 </section>

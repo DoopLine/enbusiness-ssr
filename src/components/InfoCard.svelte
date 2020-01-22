@@ -14,7 +14,7 @@
   export let type = "service";
   export let images = [];
 
-  let showGrid = false;
+  let showGrid = true;
   let currIndex = undefined;
 
   const handleShowGrid = () => {

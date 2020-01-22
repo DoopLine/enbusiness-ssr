@@ -3,6 +3,7 @@
   export let secondary = false;
   export let size = "md";
   export let theme;
+  export let href = "";
 
   theme = theme ? theme + "--border" : "";
 </script>
@@ -10,7 +11,8 @@
 <style lang="scss">
   @import "../style/theme.scss";
 
-  button {
+  button,
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +29,7 @@
     font-weight: bold;
     letter-spacing: 1px;
     transition: box-shadow 0.2s;
+    text-decoration: none;
 
     &:hover,
     &:focus {
@@ -52,11 +55,17 @@
   }
 </style>
 
-<button
-  class={theme}
-  on:click
-  {type}
-  class:secondary
-  class:large={size === 'lg'}>
-  <slot>Lorem</slot>
-</button>
+{#if href}
+  <a {href}>
+    <slot>Lorem</slot>
+  </a>
+{:else}
+  <button
+    class={theme}
+    on:click
+    {type}
+    class:secondary
+    class:large={size === 'lg'}>
+    <slot>Lorem</slot>
+  </button>
+{/if}

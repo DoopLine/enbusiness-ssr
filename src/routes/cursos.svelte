@@ -1,6 +1,8 @@
 <script>
   import { flip } from "svelte/animate";
+
   import CourseCard from "../components/CourseCard.svelte";
+  import Button from "../components/Button.svelte";
   import CourseSearch from "../containers/CourseSearch.svelte";
 
   import { courses } from "../data/coursesData.js";
@@ -17,10 +19,25 @@
 
 <style lang="scss">
   @import "../style/theme.scss";
+  @import "../style/_mixins.scss";
 
-  h5 {
-    text-align: center;
-    margin-bottom: 6rem;
+  span {
+    margin: 3rem 0;
+    @include flex-center;
+    flex-wrap: wrap;
+
+    h5 {
+      text-align: center;
+      margin: 2rem;
+    }
+
+    :global(a) {
+      animation: pulse 1s ease infinite;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
   }
 
   h3 {
@@ -38,10 +55,13 @@
   <title>Cursos Enbusiness</title>
 </svelte:head>
 
-<h5>
-  Conheça os nossos
-  <strong>cursos</strong>
-</h5>
+<span>
+  <h5>
+    Conheça os nossos
+    <strong>cursos</strong>
+  </h5>
+  <Button href="/inscricao">Inscrever-se</Button>
+</span>
 
 <section>
   {#each currCourses() as course, i (course)}
