@@ -31,6 +31,7 @@
     display: flex;
     @include transform-center;
     align-items: center;
+    z-index: 2;
 
     :global(svg) {
       cursor: pointer;
@@ -87,7 +88,10 @@
       top: 0;
       left: 0;
       width: 100%;
+      height: 100%;
       cursor: pointer;
+      border-radius: 0;
+      z-index: 1;
     }
   }
 </style>

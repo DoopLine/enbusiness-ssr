@@ -20,7 +20,11 @@
     padding: 2rem;
     min-height: 15rem;
     border-radius: $radius;
-    background-image: linear-gradient(45deg, #355da4, #3763b0);
+    background: url("/bg_polygon.png") no-repeat $main-color;
+    // background-image: linear-gradient(45deg, #355da4, #3763b0);
+    background-blend-mode: color-burn;
+    background-position: center;
+    background-size: cover;
     color: $light-color;
     margin-bottom: 8rem;
 

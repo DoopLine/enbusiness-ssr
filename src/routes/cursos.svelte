@@ -69,10 +69,11 @@
       <CourseCard courseType={course} />
     </div>
   {:else}
-    <h3>Nenhum curso encontrado</h3>
+    <h3>Curso não encontrado</h3>
   {/each}
 </section>
 
 <CourseSearch
   value={searchValue}
-  on:input={e => (searchValue = e.target.value)} />
+  on:input={e => (searchValue = e.target.value)}
+  on:clean={() => (searchValue = '')} />

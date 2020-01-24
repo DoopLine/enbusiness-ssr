@@ -47,5 +47,5 @@
     </slot>
   </select>
 {:else}
-  <input {type} {placeholder} {value} on:input />
+  <input {type} {placeholder} {value} on:input on:blur />
 {/if}

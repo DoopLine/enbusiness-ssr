@@ -6,7 +6,17 @@ module.exports = {
 		},
 		postcss: {
 			plugins: [
-				require("postcss-preset-env")({ stage: 3, autoprefixer: true })
+				require("postcss-preset-env")({
+					stage: 2,
+					autoprefixer: { flex: "no-2009" }
+				}),
+				require("doiuse")({
+					browsers: ["safari >= 9", " iOS >= 7"],
+					ignore: ["rem"],
+					onFeatureUsage: function(usageInfo) {
+						console.log(usageInfo.message);
+					}
+				})
 			]
 		}
 	})

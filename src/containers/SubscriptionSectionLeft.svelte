@@ -7,13 +7,25 @@
 
   import { courses, getModules } from "../data/coursesData";
 
-  let currCourse;
+  const subscription = {
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+    modules: [],
+    totalPrice: 0
+  };
+
+  // $: console.log(subscription);
+
   let selectedModule = 1;
 
-  $: currModules = getModules(currCourse);
+  $: currModules = getModules(subscription.course);
 
   $: currModule = () => {
-    if (selectedModule === 1) return currModules.sections[0].modules;
+    if (selectedModule === 1) {
+      return currModules.sections[0].modules;
+    }
     if (selectedModule === 2) return currModules.sections[1].modules;
     if (selectedModule === 3)
       return [
@@ -25,7 +37,7 @@
 
 <style lang="scss">
   article {
-    flex-basis: 50%;
+    flex-basis: 55%;
     height: 100%;
 
     display: flex;
@@ -77,29 +89,46 @@
 
 <article>
   <form>
-    <Input placeholder="Nome Completo" />
-    <Input type="tel" placeholder="Email" />
-    <Input type="email" placeholder="Telefone" />
-    <Input type="select" bind:value={currCourse}>
+    <Input
+      placeholder="Nome Completo"
+      value={subscription.name}
+      on:blur={e => (subscription.name = e.target.value)} />
+    <Input
+      type="email"
+      placeholder="Email"
+      value={subscription.email}
+      on:blur={e => (subscription.email = e.target.value)} />
+    <Input
+      type="tel"
+      placeholder="Telefone"
+      value={subscription.phone}
+      on:blur={e => (subscription.phone = e.target.value)} />
+    <Input type="select" bind:value={subscription.course}>
       {#each courses as course}
         <option value={course}>{course}</option>
       {/each}
     </Input>
     <div class="radio-group">
-      <RadioButton name="module" value={1} bind:group={selectedModule}>
+      <RadioButton name="section" value={1} bind:group={selectedModule}>
         Básico
       </RadioButton>
-      <RadioButton name="module" value={2} bind:group={selectedModule}>
+      <RadioButton name="section" value={2} bind:group={selectedModule}>
         Avançado
       </RadioButton>
-      <RadioButton name="module" value={3} bind:group={selectedModule}>
+      <RadioButton name="section" value={3} bind:group={selectedModule}>
         Todos
       </RadioButton>
     </div>
     <ul>
-      {#each currModule() as { name, price }}
+      {#each currModule() as { name, price }, i (Math.random())}
         <li>
-          <CheckBox id={name} text={name} />
+          <input
+            id={name}
+            class="checkbox"
+            type="checkbox"
+            bind:group={subscription.modules}
+            value={name} />
+          <label for={name}>{name}</label>
           <Label small={true}>Indisponivel</Label>
         </li>
       {/each}

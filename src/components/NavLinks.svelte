@@ -16,7 +16,7 @@
   $: location = $page.path;
 
   onMount(async () => {
-    hash = await window.location.hash || "#home";
+    hash = await window.location.hash;
   });
 
   const linksList = [

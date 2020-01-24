@@ -3,7 +3,7 @@
   // import { fly } from 'svelte/transition';
 
   export let images = [];
-  export let currImageindex;
+  export let currImageindex = 0;
 
   let showImage = false;
 

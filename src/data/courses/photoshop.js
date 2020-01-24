@@ -35,7 +35,7 @@ export const basicModule = {
 			price: 10000
 		},
 		{
-			name: "Bonus",
+			name: "Bonus-1",
 			desc:
 				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo earum deleniti aspernatur, nemo totam inventore eum ratione ullam voluptas perferendis doloribus minima mollitia ",
 			price: 10000
@@ -77,7 +77,7 @@ export const advanceModule = {
 			price: 10000
 		},
 		{
-			name: "Bonus",
+			name: "Bonus-2",
 			desc:
 				"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo earum deleniti aspernatur, nemo totam inventore eum ratione ullam voluptas perferendis doloribus minima mollitia ",
 			price: 10000

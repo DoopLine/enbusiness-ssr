@@ -16,6 +16,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "gh-pages": "^2.2.0",
+    "jspdf": "^1.5.3",
     "polka": "next",
     "sirv": "^0.4.0",
     "svelte-preprocess": "^3.3.0"
@@ -44,7 +45,7 @@
     "svelte-icons": "^1.1.0"
   },
   "browserslist": [
-    "> 0.25% ",
+    "cover 99.5%",
     "not dead"
   ]
 }

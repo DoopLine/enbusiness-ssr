@@ -1,6 +1,8 @@
 <script>
   export let id;
   export let text = "Lorem ipsuum";
+  export let value;
+  export let group;
 </script>
 
 <style lang="scss">
@@ -62,5 +64,5 @@
   }
 </style>
 
-<input {id} type="checkbox" />
-<label for={id}>{text}</label>
+<input type="checkbox" {id} {value} bind:group />
+<label for={id}>{text}</label> 

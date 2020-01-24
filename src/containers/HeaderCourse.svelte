@@ -24,6 +24,6 @@
 
 <section>
   <video autoplay controls loop>
-    <source src="./cursos.mp4" />
+    <source src="./cursos_high.mp4" />
   </video>
 </section>
